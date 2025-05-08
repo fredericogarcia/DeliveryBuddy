@@ -1,11 +1,11 @@
 import { StyleSheet, View } from 'react-native';
 import { ScreenContent } from '~/components/ScreenContent';
 
-export default function Dashboard() {
+export default function NewShift() {
   return (
     <>
       <View style={styles.container}>
-      <ScreenContent path="app/(tabs)/index.tsx" title="Dashboard" />
+        <ScreenContent path="app/(tabs)/newShift.tsx" title="+" />
       </View>
     </>
   );

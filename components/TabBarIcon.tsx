@@ -1,4 +1,5 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { CSSProperties } from 'react';
 import { StyleSheet } from 'react-native';
 
 export const TabBarIcon = (props: {
@@ -12,4 +13,5 @@ export const styles = StyleSheet.create({
   tabBarIcon: {
     marginBottom: -3,
   },
+
 });
