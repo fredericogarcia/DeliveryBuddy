@@ -8,13 +8,14 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#d62828',
-        tabBarInactiveTintColor: "#1d2d44",
+        tabBarActiveTintColor: '#FF4267',
+        tabBarInactiveTintColor: "#070333",
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: "Dashboard",
+          sceneStyle: styles.container,
           tabBarIcon: ({ color }) => <FontAwesome name="home" color={color} size={28} style={styles.tabBarIcon}/>,
         }}
       />
@@ -22,6 +23,7 @@ export default function TabLayout() {
         name="shifts"
         options={{
           title: "Shifts",
+          sceneStyle: styles.container,
           tabBarIcon: ({ color }) => <FontAwesome name="table" color={color} size={28} style={styles.tabBarIcon}/>,
         }}
       />
@@ -29,6 +31,7 @@ export default function TabLayout() {
         name="newShift"
         options={{
           title: "",
+          sceneStyle: styles.container,
           tabBarIcon: ({ color, focused }) => (
             <View style={getTabBarIconCenteredPosition(focused)}>
               <FontAwesome name="plus" color={color} size={28} style={styles.tabBarIconWhite}/>
@@ -40,6 +43,7 @@ export default function TabLayout() {
         name="reports"
         options={{
           title: "Reports",
+          sceneStyle: styles.container,
           tabBarIcon: ({ color }) => <FontAwesome name="calendar-o" color={color} size={28} style={styles.tabBarIcon}/>,
 
         }}
@@ -48,6 +52,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
+          sceneStyle: styles.container,
           tabBarIcon: ({ color }) => <FontAwesome name="gear" color={color} size={28} style={styles.tabBarIcon}/>,
         }}
       />
@@ -63,11 +68,15 @@ const styles = StyleSheet.create({
     marginBottom: -5,
     color: "white",
   },
+  container: {
+    backgroundColor: "#070333",
+    color: "white"
+  }
 });
 
 
 const getTabBarIconCenteredPosition = (focused: boolean): ViewStyle => ({
-  backgroundColor: focused ? "#d62828" : "#1d2d44",
+  backgroundColor: focused ? "#FF4267" : "#070333",
   width: 60,
   height: 60,
   borderRadius: 30,

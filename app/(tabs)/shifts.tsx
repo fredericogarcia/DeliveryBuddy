@@ -1,12 +1,14 @@
-import { StyleSheet, View } from 'react-native';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Text, StyleSheet } from 'react-native';
+import { Container } from '~/components/Container';
+import Header from '~/components/Header';
 
-export default function Shifts() {
+export default function Dashboard() {
   return (
     <>
-      <View style={styles.container}>
-        <ScreenContent path="app/(tabs)/shifts.tsx" title="Shifts" />
-      </View>
+      <Header />
+      <Container>
+          <Text className='text-black'>Shifts</Text>
+      </Container>
     </>
   );
 }

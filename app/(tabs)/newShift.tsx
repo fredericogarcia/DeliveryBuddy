@@ -1,16 +1,17 @@
-import { StyleSheet, View } from 'react-native';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Text, StyleSheet } from 'react-native';
+import { Container } from '~/components/Container';
+import Header from '~/components/Header';
 
-export default function NewShift() {
+export default function Dashboard() {
   return (
     <>
-      <View style={styles.container}>
-        <ScreenContent path="app/(tabs)/newShift.tsx" title="+" />
-      </View>
+      <Header />
+      <Container>
+          <Text className='text-black'>New Shift</Text>
+      </Container>
     </>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

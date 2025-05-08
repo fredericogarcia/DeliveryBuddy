@@ -1,19 +1,20 @@
-import { StyleSheet, View } from 'react-native';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Text } from 'react-native';
+import { Container } from '~/components/Container';
+
+import Header from '~/components/Header';
 
 export default function Dashboard() {
   return (
     <>
-      <View style={styles.container}>
-      <ScreenContent path="app/(tabs)/index.tsx" title="Dashboard" />
-      </View>
+      <Header />
+      <Container>
+          <Text className='text-black'>Previous Shifts</Text>
+      </Container>
     </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-  },
-});
+
+
+
+
